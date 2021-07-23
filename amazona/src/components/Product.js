@@ -3,7 +3,6 @@ import Rating from "./Rating";
 
 const Product = (props) => {
 	const { product } = props;
-	console.log(product);
 	return (
 		<div className="card">
 			<a href={`/product/${product._id}`}>
