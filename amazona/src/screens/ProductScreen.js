@@ -12,7 +12,6 @@ const ProductScreen = (props) => {
 	const { error, loading, product } = useSelector(
 		(state) => state.detailReducer
 	);
-	console.log(error, loading, product);
 
 	useEffect(() => {
 		dispatch(detailProduct(productId));

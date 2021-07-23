@@ -8,7 +8,7 @@ import {
 const initialState = {
 	loading: true,
 	product: {},
-	error: false,
+	error: "",
 };
 
 export default (state = initialState, action) => {
@@ -28,7 +28,7 @@ export default (state = initialState, action) => {
 			return {
 				...state,
 				loading: false,
-				error: true,
+				error: action.payload,
 			};
 		default:
 			return state;
