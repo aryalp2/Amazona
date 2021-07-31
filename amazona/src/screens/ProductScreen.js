@@ -21,9 +21,6 @@ const ProductScreen = (props) => {
 	if (!product) {
 		return <div>Product doesnot exist</div>;
 	}
-
-	console.log(props);
-
 	const addToCardHandler = () => {
 		props.history.push(`/cart/${productId}?qty=${qty}`);
 	};
