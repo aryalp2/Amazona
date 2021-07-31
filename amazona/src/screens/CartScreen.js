@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart } from "../redux/action/cartAction";
+import { addToCart, removeFromCart } from "../redux/action/cartAction";
 import { Link } from "react-router-dom";
 import Message from "../components/Message";
 
@@ -19,10 +19,10 @@ const CartScreen = (props) => {
 		}
 	}, [dispatch, productId, qty]);
 	const removeFromCartHandler = (id) => {
-		console.log(id);
+		dispatch(removeFromCart(id));
 	};
 	const checkOutHandler = () => {
-		console.log("hello");
+		props.history.push("/signin?redirect=shipping");
 	};
 	return (
 		<div className="row top">
